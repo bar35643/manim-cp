@@ -1,3 +1,6 @@
+import sys
+sys.path.insert(0, '../..')
+
 from manim import *
 from core import *
 from random import random

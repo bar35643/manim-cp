@@ -1,5 +1,6 @@
-from manim import *
+from common import *
 from core import *
+from manim import *
 
 class p20(Scene):
     def construct(self):
@@ -34,7 +35,7 @@ class p20(Scene):
 
             q2 = Tex(f"q = {x}").center().to_edge(UP)
             anim  = [ Transform(q, q2) ]
-            anim += [ Transform(idx, idx.copy().next_to(A(0), UP)) ] 
+            anim += [ Transform(idx, idx.copy().next_to(A(0), UP)) ]
             self.play( *anim, run_time=RT )
             for i in range(N):
                 anim = []

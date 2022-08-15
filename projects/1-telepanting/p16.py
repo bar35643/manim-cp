@@ -1,6 +1,6 @@
+from common import *
 from core import *
 from manim import *
-from common import *
 
 # Add sample case (first line, then ant, then portals, then states, then show progression)
 class p16(Scene):
@@ -104,11 +104,11 @@ class p16(Scene):
             _, pobj = mp[i]
             anim += [ pobj.toggle() ]
         self.play( *anim )
-        
+
         fade = []
         for o in [X,Y,S]:
             fade += [o.mob, o.label]
-        
+
         dpv = VGroup( dp.mob, dp.label )
         target = dpv.copy().center().to_edge(DOWN).shift(0.5*UP)
         self.play( dpv.animate.move_to(target), *map(FadeOut, fade) )

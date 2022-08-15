@@ -1,6 +1,6 @@
+from common import *
 from core import *
 from manim import *
-from common import *
 
 class p13(Scene):
     def construct(self):
@@ -27,7 +27,7 @@ class p13(Scene):
 
         simulate(self, ant, portals, ax, run_time=.5, indi=False,
                  t=-1, steps=7)
-        t = Timer(label='$dp_i = $')
+        t = Timer(label='dp_i = ')
         t.mob.move_to(portals[2].mobs.entrance)
         t.mob.shift(DOWN*.7)
         self.play(FadeIn(t.mob))
@@ -41,7 +41,7 @@ class p13(Scene):
         simulate(self, ant, portals, ax, run_time=.5, indi=False,
                  t=-1, steps=2, start_pos=-1)
 
-        t = Timer(label='$dp_i = $')
+        t = Timer(label='dp_i = ')
         t.mob.move_to(portals[2].mobs.entrance)
         t.mob.shift(DOWN*.7)
         self.play(FadeIn(t.mob))

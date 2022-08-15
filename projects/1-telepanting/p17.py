@@ -1,6 +1,6 @@
+from common import *
 from core import *
 from manim import *
-from common import *
 from random import randint, choice
 
 

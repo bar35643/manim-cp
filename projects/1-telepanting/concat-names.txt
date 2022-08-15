@@ -1,0 +1,24 @@
+p1-2-3			Endet
+p4
+p7-8-9
+p5-6
+p7-8-9
+p7-8-9
+p7-8-9
+p7-8-9
+induction
+p10-11-12
+p7-8-9			4:49
+???
+fibonacci
+p16
+p15
+p18
+p17
+complexity
+p17			8:40
+???
+p18			8:55
+p21
+p20
+p24

@@ -1,7 +1,8 @@
-from core import *
 from common import *
+from core import *
+from manim import *
 
-class Induction(Scene):
+class p26(Scene):
     def construct(self):
         @cluster
         def proof():
@@ -9,7 +10,7 @@ class Induction(Scene):
             tex = lambda s : Tex(r"\raggedright " + s, font_size=26)
             fly = lambda s : StyleText(s, font_size=27, underline=True)
             sml = lambda s : Tex(r"\raggedright " + s, font_size=22)
-            
+
             lab = fly("Claim:")
             txt = tex(r"All portal entrances to the left of \\the ant at any given time are OPEN!")
             txt.to_corner(LEFT+UP, buff=3/4)
@@ -22,7 +23,7 @@ class Induction(Scene):
             txt.next_to(claim, DOWN, buff=BUF).align_to(claim, LEFT)
             VGroup(lab, mtx).arrange().next_to(txt, UP).align_to(txt, LEFT)
             base = VGroup(lab, mtx, txt)
-            
+
             lab = fly("Inductive Hypothesis (IH):")
             txt = tex("Assume all portal entrances to the left are open.")
             txt.next_to(base, DOWN, buff=2*BUF+0.4).align_to(claim, LEFT)
@@ -43,7 +44,7 @@ class Induction(Scene):
             base.next_to(claim, DOWN).align_to(claim, LEFT).shift(0.2*DOWN)
             hyp.to_corner(UP+RIGHT, buff=3/4).shift(1/3*DOWN)
             istep.center().shift(2.25*DOWN)
-        
+
         @sub_scene
         def demo():
             def step():
@@ -72,10 +73,10 @@ class Induction(Scene):
                     self.add_foreground_mobject(o.mob)
                     c[0] += 1
                     return Create(o.mob)
-                
+
                 self.play( Indicate(proof.hyp, scale_factor=1.1), make_portal(2.1), make_portal(2.3), make_portal(2.5), make_portal(2.7) )
                 yield  # 3
-                
+
                 for p in port:
                     self.play(FadeIn(p.mob))
                 # beat 11: [Show ant teleporting back, grow size of open portals or smth]
@@ -107,7 +108,3 @@ class Induction(Scene):
         self.play( Write(proof.st2) )
         next(demo)  # 5
         self.wait()
-
-
-
-

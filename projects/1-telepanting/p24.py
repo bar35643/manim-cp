@@ -1,6 +1,6 @@
-from manim import *
 from common import *
 from core import *
+from manim import *
 
 class p24(Scene):  # TODO: change to ABWScene
     def construct(self):

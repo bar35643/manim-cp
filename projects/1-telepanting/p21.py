@@ -1,6 +1,6 @@
-import sys
-from manim import *
+from common import *
 from core import *
+from manim import *
 
 
 # TODO: add indices

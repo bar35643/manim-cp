@@ -1,6 +1,8 @@
+from common import *
 from core import *
+from manim import *
 
-class dynamicProgramming(Scene):
+class p25(Scene):
     def construct(self):
         sc = 0.55
         FS = 25
@@ -44,5 +46,3 @@ class dynamicProgramming(Scene):
         A = [b]
         fib_dp(9, UP, A)
         self.play( *map(FadeOut, A), FadeOut(DP.mob), *map(FadeOut, idx) )
-    
-            

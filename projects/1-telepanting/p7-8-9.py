@@ -1,6 +1,6 @@
+from common import *
 from core import *
 from manim import *
-from common import *
 
 class p7(Scene):
     def construct(self):
@@ -53,4 +53,3 @@ class p7(Scene):
         #     self.wait(w)
         #     simulate(self, ant, portals, ax, run_time=.5, indi=False,
         #              steps=s, t=t)
-

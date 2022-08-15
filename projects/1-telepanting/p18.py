@@ -1,6 +1,6 @@
+from common import *
 from core import *
 from manim import *
-from common import *
 
 class p18(MovingCameraScene):
     def construct(self):

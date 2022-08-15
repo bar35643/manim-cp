@@ -1,6 +1,6 @@
-from core.utils import *
-from manim import *
 from common import *
+from core import *
+from manim import *
 
 class p1(Scene):
     def construct(self):

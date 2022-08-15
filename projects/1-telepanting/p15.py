@@ -1,6 +1,6 @@
+from common import *
 from core import *
 from manim import *
-from common import *
 
 # Add sample case (first line, then ant, then portals, then states, then show progression)
 class p15(Scene):
@@ -110,5 +110,3 @@ class p15(Scene):
 
 
         self.wait(3)
-
-

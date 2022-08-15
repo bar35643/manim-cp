@@ -1,6 +1,8 @@
+from common import *
 from core import *
+from manim import *
 
-class Complexity(Scene):
+class p27(Scene):
     def construct(self):
         self.wait()
         w = MathTex("O(N^2)",font_size=128)

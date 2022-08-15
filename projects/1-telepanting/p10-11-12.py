@@ -1,6 +1,6 @@
+from common import *
 from core import *
 from manim import *
-from common import *
 from random import randint, choice
 
 
@@ -60,4 +60,3 @@ class p10(Scene):
         self.wait(1)
         self.play(*reset_portals(portals, coords))
         self.wait(1)
-        

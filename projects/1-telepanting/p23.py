@@ -103,16 +103,16 @@ from bisect import *
 
 def solve(N, X, Y, S):
     cost = 0
-    ps = [0] * (N+1) 
+    ps = [0] * (N+1)
     for i in range(N):
         enter = X[i]
         exit = Y[i]
         j = bisect(X, exit)
-        dist = enter - exit      
-        penalty = ps[i] - ps[j]  
+        dist = enter - exit
+        penalty = ps[i] - ps[j]
         dp_i = penalty + dist
         ps[i+1] = ps[i] + dp_i
-        if S[i] == 1:   
+        if S[i] == 1:
             cost += dp_i
 
     end = X[-1] + 1
